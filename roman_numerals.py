@@ -1,3 +1,7 @@
+import sys
+
+this_script = sys.argv[0]
+input_numerals = sys.argv[1:]
 
 roman_dict = {"I":1,
               "V":5,
@@ -35,13 +39,15 @@ def convert_roman_numerals(rom_str):
     number = list_to_number(rom_list)
     return number
 
-convert_roman_numerals("XV")
+#convert_roman_numerals("XV")
 
-convert_roman_numerals("C")
+#convert_roman_numerals("C")
 
-convert_roman_numerals("XXIV")
+#convert_roman_numerals("XXIV")
 
-convert_roman_numerals("XLIX")
+#convert_roman_numerals("XLIX")
 
-
+for item in input_numerals:
+    print "Roman Numeral is: "+item
+    print "Arabic Numeral is: ", convert_roman_numerals(item)
 
